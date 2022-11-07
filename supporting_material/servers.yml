@@ -120,6 +120,7 @@ Resources:
       VpcId: 
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
+Outputs:           
   WebAppLBDNSName:
     Description: LoadBalance DNS
     Value: !Join ["", ["http://", !GetAtt WebAppLB.DNSName]]
