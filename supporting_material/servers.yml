@@ -122,7 +122,7 @@ Resources:
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
   WebAppLBDNSName:
-    Description: add http:// to LB DNS Name
+    Description: LoadBalance DNS
     Value: !Join ["", ["http://", !GetAtt WebAppLB.DNSName]]
     Export:
       Name: !Sub ${EnvironmentName}-LB-DNSName        
